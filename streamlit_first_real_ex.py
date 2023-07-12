@@ -9,7 +9,7 @@ from langchain.chains import LLMChain
 #from langchain.chains import SequentialChain
 
 st.title("translator")
-input_text=st.text_input("Search") 
+input_text=st.text_input(":fried_egg:") 
 
 
 ####### set up  
