@@ -11,10 +11,10 @@ from langchain.chains import LLMChain
 
 st.title("translator")
 
-selected_language = st.radio(
-    "Select a target language",
-    ('English', 'French', 'Mandarin')
-)
+# selected_language = st.radio(
+#     "Select a target language",
+#     ('English', 'French', 'Mandarin')
+# )
     
 input_text=st.text_input(":fried_egg:") 
 
@@ -33,8 +33,9 @@ language_prompt = PromptTemplate(
 )
 
 
+language_prompt.format(sentence="this is a test", target_language='english')
+# language_prompt.format(sentence="this is a test", target_language=selected_language)
 language_prompt.format(sentence="this is a test", target_language='japanese')
-language_prompt.format(sentence="this is a test", target_language=selected_language)
 
 ######chain 
 llm = OpenAI(temperature=0.7)
